@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lights Out Puzzle</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1 class="heading">Lights Out Puzzle</h1>
+<div class="container" id="grid"></div>
+
+<div class="board" id="board"></div>
+
+<div class="buttons">
+  <button class="btn" id="restartBtn">Restart</button>
+  <button class="btn" id="randomizeBtn">Randomize</button>
+  <button class="btn" id="instructionsBtn" onclick="openInstructions()">Game Instructions</button>
+  <button class="btn" id="addendumBtn" onclick="Addendum()">Addendum</button>
+  <button class="btn" id="switchGameBtn" onclick="switchGame()">Switch Game</button>
+</div>
+<div id="instructionsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeInstructions()">&times;</span>
+        <h2>Game Instructions</h2>
+        <p>Here's a detailed explanation of how to play the Lights Out puzzle game:</p>
+        <p><strong>Objective:</strong> The goal of the game is to turn off all the lights on the grid. Each cell in the grid can be in one of two states: on or off.</p>
+        <p><strong>Grid:</strong>The game starts with a grid of lights, where some lights are on and some are off. The grid is usually represented as a square with cells that can be clicked to toggle their state.</p>
+        <p><strong>Toggle Lights: </strong> Clicking on a cell toggles the state of that cell and the adjacent cells (up, down, left, right). For example, if you click on a cell that is currently on, it will turn off, and its adjacent cells will toggle their states as well.</p>
+        <p><strong>Strategy:</strong>The challenge of the game is to figure out the right sequence of moves to turn off all the lights. Since clicking on a cell affects its neighbors, you need to plan your moves carefully to solve the puzzle.</p>
+        <p><strong>Winning: </strong>You win the game when you successfully turn off all the lights on the grid. When this happens, a message will typically appear indicating that you have won.</p>
+        <p><strong>Restart: </strong>If you get stuck or want to try a different approach, you can use the restart button to reset the grid to its original state.</p>
+        <p><strong>Randomize: </strong>The randomize button allows you to start a new game with a randomly generated grid, providing a fresh challenge each time you play.</p>
+        <p><strong>Challenge Yourself:</strong>As you become more familiar with the game, you can challenge yourself by trying to solve the puzzle in fewer moves or in a shorter amount of time.</p>
+        <p><strong>Practice Makes Perfect: </strong>Like many puzzle games, practice is key to improving your skills. The more you play, the better you'll become at recognizing patterns and finding the most efficient solutions.</p>
+        
+    </div>
+
+</div>
+<div id="addendumModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeAddendun()">&times;</span>
+        <h2>Addendum</h2>
+        <ol>
+            <li><strong>Creative Choices:</strong>I chose a responsive layout that adapts to different screen sizes, making the puzzle playable on both desktop and mobile devices. I also added a restart button for convenience.</li>
+            <li><strong>Challenges Faced:</strong>One challenge was handling cell toggling and updating adjacent cells' states efficiently. I overcame this by carefully tracking each cell's state and applying the toggling logic consistently.</li>
+            <li><strong>Insights Gained:</strong>Through this process, I gained a deeper understanding of JavaScript event handling, DOM manipulation, and CSS styling techniques. I also learned to approach problems systematically, breaking them down into smaller, manageable tasks.</li>
+            <li><strong>Conceptualization:</strong>I began by understanding the rules of the Lights Out puzzle, which involves toggling the state of cells in a grid and aiming to turn off all cells.</li>
+            <li><strong>Design and Layout:</strong>I decided to use HTML for the structure, CSS for styling, and JavaScript for interactivity. I chose a simple and intuitive layout, using a table to represent the grid and buttons for user interaction.</li>
+            <li><strong> Implementation: </strong>I started by coding the basic functionality, such as creating the grid, toggling cell states, and checking for a solved puzzle. I used event listeners to detect user clicks and update the grid accordingly.</li>
+            <li><strong>Styling:</strong>I used CSS to style the puzzle grid, cells, buttons, and overall layout. I aimed for a clean and visually appealing design while ensuring that the puzzle remains the focus.</li>
+            <li><strong> Testing and Debugging: </strong>I tested the application extensively to ensure it worked as expected. I used browser developer tools to debug any issues and made adjustments to improve user experience.</li>
+            
+        </ol>
+        <span class="close" onclick="Addendum()">&times;</span>
+    </div>
+</div>
+
+<footer>
+    <p>Last updated: 
+        <span id="lastModified"></span>
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

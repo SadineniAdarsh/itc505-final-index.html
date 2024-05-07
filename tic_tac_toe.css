@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    background-image: url('https://source.unsplash.com/random/1600x900');
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.heading {
+    text-align: center;
+    color: #e70d0d;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    margin: 2px;
+    cursor: pointer;
+}
+.buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #c40909d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: #e7dede;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer span {
+    font-weight: bold;
+    color: #ff6347;
+}
+
+#lastModified {
+    color: #ff0000;
+    font-weight: bold;
+}

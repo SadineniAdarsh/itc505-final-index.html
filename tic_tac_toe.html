@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" type="text/css" href="tic_tac_toe.css">
+</head>
+<body>
+
+<h1 class="heading">Tic Tac Toe</h1>
+
+<div id="ticTacToeBoard" class="board">
+  <div class="row">
+    <div class="cell" onclick="placeMarker(0, 0)"></div>
+    <div class="cell" onclick="placeMarker(0, 1)"></div>
+    <div class="cell" onclick="placeMarker(0, 2)"></div>
+  </div>
+  <div class="row">
+    <div class="cell" onclick="placeMarker(1, 0)"></div>
+    <div class="cell" onclick="placeMarker(1, 1)"></div>
+    <div class="cell" onclick="placeMarker(1, 2)"></div>
+  </div>
+  <div class="row">
+    <div class="cell" onclick="placeMarker(2, 0)"></div>
+    <div class="cell" onclick="placeMarker(2, 1)"></div>
+    <div class="cell" onclick="placeMarker(2, 2)"></div>
+  </div>
+</div>
+
+<div class="buttons">
+  <button onclick="restartGame()">Restart</button>
+  <button onclick="switchGame()">Switch Game</button>
+</div>
+
+<footer>
+    <p>Last updated: 
+        <span id="lastModified"></span>
+    </p>
+</footer>
+
+<script src="tic_tac_toe_script.js"></script>
+
+</body>
+</html>
